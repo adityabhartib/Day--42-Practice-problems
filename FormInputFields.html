@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forms</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" >
 </head>
 <body>
     <form>
         <header
             class = "headerContainer"><h1>HTML 5 Form Input Fields</h1></header>
 <div>
-    <label for ="text">text input type for Name :</label>
+    <label for ="text">Enter Name :</label>
     <input type="text" id="text" name="text">
     <error-output class="text-error" for="text"></error-output>
 </div>
 <div>
-    <label  for="pwd">password input type :</label>
+    <label  for="pwd">Enter Password :</label>
     <input type="password" id="pwd" name="pwd">
 </div>
 <div>
-    <label for="email">email input type :</label>
+    <label for="email">Enter Email :</label>
     <input type="url" id="url"  name="url">
 </div>
 <div>
@@ -28,7 +28,7 @@
     <input type="number" id="number" name="number">
 </div>
 <div>
-    <label for="tel">tel input type :</label>
+    <label for="tel">Enter Phone Number :</label>
     <input type="tel" id="tel" name="tel">
 </div>
 <div>
@@ -51,21 +51,6 @@
     <button>Submit</button>
 </div>
     </form>
-    <script>
-    const text = document.querySelector('#text');
-    const textError = document.querySelector('.text-error');
-    text.addEventListener('input',function(){
-        let nameRegex = RegExp('^[A-Z]{1}[a-z]{2,}$');
-        if(nameRegex.test(text.value))
-        textError.textContent = "";
-        else textError.textContent ="Name is Incorrect"
-    });
-    const salary = document.querySelector('#salary');
-    const output =document.querySelector('.salary-output');
-    output.textContent = salary.value;
-    salary.addEventListener('input',function(){
-        output.textContent = salary.value
-    });
-  </script>  
+  <script src="form_validation.js"></script>  
 </body>
 </html>
