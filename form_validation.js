@@ -19,6 +19,18 @@ if (emailRegex.test(email.value)) {
 else{
    emailError.textContent = "Invalid Email---!!!"}
 });
+const tel = document.querySelector('#tel')
+const telError = document.querySelector('.tel-error')
+tel.addEventListener('input',function () {
+let telRegex = RegExp("^[0-9]{2}[ ][0-9]{10}$")
+if (telRegex.test(tel.value))
+   {
+       telError.textContent = ""}
+else
+   {
+       telError.textContent = "Invalid Phone Number !!"
+   } 
+});
 
 const salary = document.querySelector('#salary')
 const output = document.querySelector('.salary-output')
