@@ -32,6 +32,19 @@ else
    } 
 });
 
+const pwd = document.querySelector('#pwd')
+const pwdError = document.querySelector('.pwd-error')
+pwd.addEventListener('input',function () {
+let pwdRegex = RegExp("^[A-Z]?[A-Za-z]{4,}[@!$*]{1}[0-9]{2,}$")
+if (pwdRegex.test(pwd.value))
+   {
+       pwdError.textContent = ""}
+else
+   {
+       pwdError.textContent = "Invalid Password !!"
+   } 
+});
+
 const salary = document.querySelector('#salary')
 const output = document.querySelector('.salary-output')
 output.textContent = salary.value;
